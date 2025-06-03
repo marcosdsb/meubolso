@@ -6,6 +6,6 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface MesReferenciaMapper {
-    MesReferenciaDTO toDTO(MesReferencia mesReferencia);
+    MesReferenciaDTO toDto(MesReferencia mesReferencia);
     MesReferencia toEntity(MesReferenciaDTO mesReferenciaDTO);
 }
