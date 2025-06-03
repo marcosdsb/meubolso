@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/tipo-compustivel")
+@RequestMapping("/api/tipo-combustivel")
 @Tag(name = "Tipo de Combustível", description = "Endponts relacionados ao CRUD tipo de combustível")
 public class TipoCombustivelController {
 

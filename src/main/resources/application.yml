@@ -25,6 +25,10 @@ spring:
     schemas: public
     baseline-on-migrate: true
 
+  devtools:
+    restart:
+      enabled: false
+
 logging:
   level:
     org.hibernate.SQL: DEBUG

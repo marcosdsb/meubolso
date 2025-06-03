@@ -20,6 +20,6 @@ public class StatusPagamento {
     @NotNull
     @Enumerated(EnumType.STRING)
     @Column(length = 20, name = "STATUS" )
-    private StatusEnum statusEnum;
+    private StatusEnum status;
 
 }
