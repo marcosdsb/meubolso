@@ -20,7 +20,7 @@ import java.time.LocalDate;
 public class Investimento {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    private Integer id;
+    private Long id;
 
     @NotNull
     @Enumerated(EnumType.STRING)

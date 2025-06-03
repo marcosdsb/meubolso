@@ -6,6 +6,6 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface InvestimentoMapper {
-    InvestimentoDTO toDTO(Investimento investimento);
+    InvestimentoDTO toDto(Investimento investimento);
     Investimento toEntity(InvestimentoDTO investimentoDTO);
 }
