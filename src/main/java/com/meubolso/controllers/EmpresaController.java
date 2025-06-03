@@ -1,6 +1,7 @@
 package com.meubolso.controllers;
 
 import com.meubolso.dto.EmpresaDTO;
+import com.meubolso.services.EmpresaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

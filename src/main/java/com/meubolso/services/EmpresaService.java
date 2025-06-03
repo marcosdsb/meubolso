@@ -1,4 +1,4 @@
-package com.meubolso.controllers;
+package com.meubolso.services;
 
 import com.meubolso.dto.EmpresaDTO;
 

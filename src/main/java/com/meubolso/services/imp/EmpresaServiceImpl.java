@@ -1,6 +1,6 @@
 package com.meubolso.services.imp;
 
-import com.meubolso.controllers.EmpresaService;
+import com.meubolso.services.EmpresaService;
 import com.meubolso.dto.EmpresaDTO;
 import com.meubolso.mappers.EmpresaMapper;
 import com.meubolso.model.Empresa;
