@@ -24,4 +24,8 @@ public class Empresa {
     @Column(name = "NOME")
     private String nome;
 
+    public Empresa(Long id) {
+        this.id = id;
+    }
+
 }

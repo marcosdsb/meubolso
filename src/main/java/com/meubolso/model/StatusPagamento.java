@@ -22,4 +22,7 @@ public class StatusPagamento {
     @Column(length = 20, name = "STATUS" )
     private StatusEnum status;
 
+    public StatusPagamento(Long id) {
+        this.id = id;
+    }
 }

@@ -30,4 +30,7 @@ public class CategoriaDespesa {
     @Column(name = "DESCRICAO")
     private String descricao;
 
+    public CategoriaDespesa(Long id) {
+        this.id = id;
+    }
 }

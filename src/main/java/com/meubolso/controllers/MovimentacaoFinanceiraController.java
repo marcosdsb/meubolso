@@ -1,10 +1,13 @@
 package com.meubolso.controllers;
 
 import com.meubolso.dto.MovimentacaoFinanceiraDTO;
+import com.meubolso.filtro.MovimentacaoFinanceiraFiltro;
 import com.meubolso.services.MovimentacaoFinanceiraService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -38,4 +41,21 @@ public class MovimentacaoFinanceiraController {
     public void deletar(@PathVariable Long id) {
         service.deletar(id);
     }
+
+    // Filtro básico com 3 parâmetros
+    @GetMapping("/filtro")
+    public List<MovimentacaoFinanceiraDTO> filtrar(
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dataInicio,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dataFim,
+            @RequestParam(required = false) Long statusPagamentoId
+    ) {
+        return service.filtrar(dataInicio, dataFim, statusPagamentoId);
+    }
+
+    // Filtro completo via body (POST)
+    @PostMapping("/filtro")
+    public List<MovimentacaoFinanceiraDTO> filtrarAvancado(@RequestBody MovimentacaoFinanceiraFiltro filtro) {
+        return service.filtrar(filtro);
+    }
+
 }

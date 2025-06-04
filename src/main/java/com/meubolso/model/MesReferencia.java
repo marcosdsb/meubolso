@@ -24,4 +24,7 @@ public class MesReferencia {
     @NonNull
     private String mes;
 
+    public MesReferencia(Long id) {
+        this.id = id;
+    }
 }

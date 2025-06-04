@@ -28,4 +28,7 @@ public class FormaPagamento {
     @JoinColumn(name = "CARTAO_CREDITO")
     private CartaoCredito cartaoCredito; // Só se tipo == CARTAO_CREDITO
 
+    public FormaPagamento(Long id) {
+        this.id = id;
+    }
 }

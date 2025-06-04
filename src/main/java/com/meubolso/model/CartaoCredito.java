@@ -24,4 +24,14 @@ public class CartaoCredito {
     @Column(name = "NOME")
     private String nome;
 
+    @Column(name = "MELHOR_DIA_COMPRA")
+    private Integer melhorDiaCompra;
+
+    @Column(name = "DIA_VENCIMENTO_FATURA")
+    private Integer diaVencimentoFatura;
+
+
+    public CartaoCredito(Long id) {
+        this.id = id;
+    }
 }
