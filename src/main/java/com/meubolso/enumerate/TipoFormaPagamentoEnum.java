@@ -1,12 +1,16 @@
 package com.meubolso.enumerate;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
 public enum TipoFormaPagamentoEnum {
     CARTAO_CREDITO("Cartão de Crédido"),
-    PIXEL("Pix"),
-    DEBITO("Debito"),
-    DINHEIRO("Dinheiro")
-    ;
+    PIX("Pix"),
+    DEBITO("Cartão de Debito"),
+    DINHEIRO("Dinheiro");
 
-    TipoFormaPagamentoEnum(String s) {
-    }
+    private final String descricao;
+
 }

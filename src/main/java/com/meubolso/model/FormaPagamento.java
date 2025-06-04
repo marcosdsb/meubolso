@@ -2,7 +2,7 @@ package com.meubolso.model;
 
 import com.meubolso.enumerate.TipoFormaPagamentoEnum;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Entity
@@ -19,7 +19,7 @@ public class FormaPagamento {
     @Column(name = "ID")
     private Long id;
 
-    @NotBlank
+    @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "TIPO")
     private TipoFormaPagamentoEnum tipoFormaPagamentoEnum;
