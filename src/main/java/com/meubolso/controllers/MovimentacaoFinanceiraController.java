@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/movimentacao-financeira")
@@ -56,6 +57,14 @@ public class MovimentacaoFinanceiraController {
     @PostMapping("/filtro")
     public List<MovimentacaoFinanceiraDTO> filtrarAvancado(@RequestBody MovimentacaoFinanceiraFiltro filtro) {
         return service.filtrar(filtro);
+    }
+
+    // Grava em lote
+    @PostMapping("/batch")
+    public List<MovimentacaoFinanceiraDTO> salvarBatch(@RequestBody List<MovimentacaoFinanceiraDTO> lista) {
+        return lista.stream()
+                .map(service::salvar)
+                .collect(Collectors.toList());
     }
 
 }
