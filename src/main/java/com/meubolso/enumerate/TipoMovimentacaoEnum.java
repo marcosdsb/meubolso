@@ -8,7 +8,7 @@ import lombok.Getter;
 public enum TipoMovimentacaoEnum {
 
     ENTRADA("Entrada"),
-    SAIDA("Saída");
+    SAIDA("Saida");
 
     private final String descricao;
 }

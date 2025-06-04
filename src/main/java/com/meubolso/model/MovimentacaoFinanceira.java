@@ -27,7 +27,7 @@ public class MovimentacaoFinanceira {
     @Column(name = "valor", nullable = false)
     private BigDecimal valor;
 
-    @Column(name = "tipo", nullable = false)
+    @Column(name = "tipo_movimentacao", nullable = false)
     @Enumerated(EnumType.STRING)
     private TipoMovimentacaoEnum tipoMovimentacaoEnum;
 
